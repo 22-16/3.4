@@ -1,0 +1,13 @@
+function modifyArray(arr) {
+    arr.unshift({ name: "John" }); // Додаємо об'єкт на початок масиву
+    arr.pop(); // Видаляємо останній елемент масиву
+    if (arr.length >= 2) {
+        arr[1] = { status: "modified" }; // Змінюємо значення другого елементу
+    }
+    return arr;
+}
+
+// Приклад використання:
+let myArray = [{ id: 1 }, { id: 2 }, { id: 3 }];
+let modified = modifyArray(myArray);
+console.log(modified); // Результат виводу: [{ name: "John" }, { status: "modified" }]
