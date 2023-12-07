@@ -1,0 +1,13 @@
+function arrayOperations(arr) {
+    arr.push({ label: "end" }); // Додаємо об'єкт в кінець масиву
+    arr.shift(); // Видаляємо перший елемент масиву
+    if (arr.length >= 3) {
+        arr.splice(3, 0, { type: "middle" }); // Вставляємо об'єкт після третього елемента
+    }
+    return arr;
+}
+
+// Приклад використання:
+let myArray = [{ val: 1 }, { val: 2 }, { val: 3 }, { val: 4 }, { val: 5 }];
+let modified = arrayOperations(myArray);
+console.log(modified); // Результат виводу: [{ val: 2 }, { val: 3 }, { val: 4 }, { type: "middle" }, { val: 5 }, { label: "end" }]
