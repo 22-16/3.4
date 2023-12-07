@@ -1,0 +1,14 @@
+function checkInteger(num) {
+    if (Number.isInteger(num)) {
+        return "Це ціле число";
+    } else {
+        return "Це не ціле число";
+    }
+}
+
+// Приклад використання:
+let integerNum = 10;
+let nonIntegerNum = 7.5;
+
+console.log(checkInteger(integerNum)); // Результат виводу: "Це ціле число"
+console.log(checkInteger(nonIntegerNum)); // Результат виводу: "Це не ціле число"
